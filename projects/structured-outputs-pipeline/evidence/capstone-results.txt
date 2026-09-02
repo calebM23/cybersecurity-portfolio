@@ -1,0 +1,17 @@
+STATE valid_a: accepted_first_try
+STATE valid_b: accepted_first_try
+STATE malformed: accepted_after_repair
+STATE wrong_enum: accepted_after_repair
+STATE wrong_type: accepted_after_repair
+STATE missing_field: accepted_after_repair
+STATE extra_field: accepted_after_repair
+STATE unrepairable: rejected
+
+CHECK 1 PASS: batch reaches first-try, repaired, and rejected terminal states
+CHECK 2 PASS: metrics separate first-pass quality from recovered quality
+
+{"accepted_after_repair": 5, "accepted_first_try": 2, "final_accept_rate": 0.875, "first_pass_rate": 0.25, "rejected": 1, "total": 8}
+
+CHECK 3 PASS: accepted artifact contains seven records and every value revalidates
+CHECK 4 PASS: terminal failure is present in quarantine.jsonl
+CAPSTONE PASS: accepted artifacts are schema-valid; repair is bounded; terminal failures are quarantined
