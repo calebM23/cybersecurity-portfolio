@@ -2,6 +2,12 @@
 
 This folder contains completed and developing projects that demonstrate practical skills for IT, NOC, SOC, and cybersecurity roles.
 
+## Completed Case Studies
+
+### [Structured Outputs Pipeline](structured-outputs-pipeline)
+
+Python 3.12, JSON Schema validation, bounded repair logic, failure quarantine, metrics, and reproducible offline testing. Includes verified capstone results.
+
 ## Project Template
 
 Each project will document:
