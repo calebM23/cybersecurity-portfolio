@@ -30,7 +30,9 @@ Welcome to my cybersecurity portfolio. I am a Cybersecurity student at Collin Co
 
 ## Featured Work
 
-Projects and labs will be added as they are completed and documented.
+### [Structured Outputs Pipeline](projects/structured-outputs-pipeline)
+
+A Python 3.12 pipeline that validates AI-generated JSON against a strict schema, performs a maximum of one repair attempt, quarantines terminal failures, and records quality metrics. The verified capstone achieved an 87.5% final acceptance rate while proving that unrepairable input was rejected.
 
 | Area | Focus |
 |---|---|
