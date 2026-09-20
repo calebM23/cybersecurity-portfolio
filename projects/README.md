@@ -1,29 +1,23 @@
 # Cybersecurity Projects
 
-This folder contains completed and developing projects that demonstrate practical skills for IT, NOC, SOC, and cybersecurity roles.
+## Python Validation Case Study
 
-## Completed Case Studies
+### [Structured Outputs Validation Pipeline](structured-outputs-pipeline/README.md)
 
-### [Structured Outputs Pipeline](structured-outputs-pipeline)
+A Python 3.12 pipeline with JSON Schema validation, one repair attempt, failure quarantine, and separate first-pass and recovered-quality metrics.
 
-Python 3.12, JSON Schema validation, bounded repair logic, failure quarantine, metrics, and reproducible offline testing. Includes verified capstone results.
+The committed results transcript records eight fixtures: two accepted immediately, five accepted after repair, and one rejected. The case study and results are available; executable source, schemas, and fixtures have not yet been published in this repository.
 
-## Project Template
+## Security Monitoring Labs
 
-Each project will document:
-
-1. The problem or goal
-2. Technologies used
-3. Design and implementation
-4. Testing and results
-5. Challenges and lessons learned
-6. Possible future improvements
+- [Security Onion Zeek ingestion troubleshooting](../labs/security-onion-zeek-ingestion/README.md) — completed investigation with Hunt evidence
+- [Wazuh SIEM deployment](../labs/wazuh-siem-deployment/README.md) — server deployed; endpoint work in progress
 
 ## Project Roadmap
 
-- Python security automation tool
-- Linux system-hardening project
-- Network traffic investigation
-- Vulnerability assessment report
-- Security incident analysis
-- Security Management Practices capstone project
+- Publish original Python source, schema, fixtures, and verified offline run instructions
+- Document a controlled Wazuh endpoint alert investigation
+- Extend network traffic analysis with findings and recommendations
+- Add Linux hardening and vulnerability assessment reports
+
+[Back to portfolio](../README.md)

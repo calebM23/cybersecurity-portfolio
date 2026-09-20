@@ -1,62 +1,65 @@
 # Caleb Morrison | Cybersecurity Portfolio
 
-Welcome to my cybersecurity portfolio. I am a Cybersecurity student at Collin College and a CompTIA Security+ certified professional preparing for entry-level opportunities in cybersecurity, Security Operations Center (SOC), Network Operations Center (NOC), and IT support.
+CompTIA Security+ certified cybersecurity student at Collin College, completing my AAS in December 2026. I am pursuing entry-level SOC and cybersecurity analyst opportunities, with a focus on network visibility, log-ingestion troubleshooting, SIEM deployment, and clear technical documentation.
 
-## About Me
-
-- Cybersecurity student at Collin College
-- Expected AAS in Cybersecurity: December 2026
-- CompTIA Security+ certified
-- Building practical experience in network security, system administration, vulnerability assessment, and security operations
-- Planning to pursue the CCNA and continue into a Bachelor of Applied Technology program
-- Transitioning from professional trucking into the technology and cybersecurity industry
-
-## Technical Skills
-
-**Security:** CIA triad, AAA, risk management, access control, incident response, business continuity, disaster recovery, PKI, TLS, hashing, vulnerability management
-
-**Networking:** OSI model, TCP/IP, DNS, DHCP, NAT, VLANs, VPNs, subnetting, packet analysis
-
-**Systems:** Windows, Active Directory, Group Policy, Linux users and permissions, SELinux, AppArmor
-
-**Tools:** Wireshark, Nmap, tcpdump, Wazuh, OpenVAS, Nessus, OWASP ZAP, Nikto, Docker, Hyper-V
-
-**Programming and Platforms:** Python, PowerShell, Git, GitHub
-
-## Certifications
-
-- CompTIA Security+ — Earned July 2026
-- Cisco CCNA — Planned for early 2027
+[LinkedIn](https://www.linkedin.com/in/caleb-morrison-cybersecurity) · [Labs](labs/README.md) · [Projects](projects/README.md)
 
 ## Featured Work
 
-### [Structured Outputs Pipeline](projects/structured-outputs-pipeline)
+### [Security Onion: Restoring Zeek Telemetry](labs/security-onion-zeek-ingestion/README.md)
 
-A Python 3.12 pipeline that validates AI-generated JSON against a strict schema, performs a maximum of one repair attempt, quarantines terminal failures, and records quality metrics. The verified capstone achieved an 87.5% final acceptance rate while proving that unrepairable input was rejected.
+**Completed academic lab — September 2026**
 
-| Area | Focus |
+Diagnosed an Elasticsearch mapping conflict that prevented Zeek logs from appearing in Hunt. Reloaded index templates, rolled over the data stream, and validated restored ingestion. The lab report recorded **2,697 indexed Zeek documents**; the included Hunt screenshot shows **1,108 connection events** in a 24-hour window.
+
+**Demonstrates:** Linux troubleshooting, Elasticsearch mappings, data streams, network telemetry, and evidence-based validation.
+
+### [Wazuh SIEM Deployment](labs/wazuh-siem-deployment/README.md)
+
+**Server deployment complete — endpoint monitoring in progress**
+
+Deployed an all-in-one Wazuh server on Ubuntu in VirtualBox and confirmed dashboard access. The saved dashboard shows no registered endpoint agents; Windows enrollment and controlled alert testing are the next milestones.
+
+**Demonstrates:** SIEM installation, Linux service setup, virtual networking, and management access validation.
+
+### [Structured Outputs Validation Pipeline](projects/structured-outputs-pipeline/README.md)
+
+**Case study and results published — source and fixtures pending**
+
+Built a Python pipeline with strict JSON Schema validation, one permitted repair attempt, and failure quarantine. The recorded eight-fixture test accepted two inputs immediately, repaired five, and rejected one. All seven accepted records passed revalidation.
+
+**Demonstrates:** Defensive programming, error classification, bounded retries, failure isolation, and quality metrics.
+
+## Skills Supported by These Projects
+
+| Area | Hands-on work |
 |---|---|
-| Security Labs | Vulnerability scanning, traffic analysis, access control, and system hardening |
-| Networking Labs | VLANs, subnetting, DNS, DHCP, VPNs, and packet analysis |
-| Python Projects | Security-focused automation and scripting |
-| Linux Projects | Users, permissions, services, logging, and hardening |
-| Capstone Work | Security Management Practices coursework and applied security documentation |
+| Security monitoring | Security Onion, Zeek, Hunt queries, Wazuh deployment |
+| Troubleshooting | Linux logs and services, Elastic Agent/Fleet, Elasticsearch mappings and data streams |
+| Lab infrastructure | VMware Workstation, VirtualBox, Ubuntu Server, NAT and host-only networking |
+| Programming | Python 3.12, JSON Schema validation, JSONL, repair limits and quarantine |
+| Documentation | Root-cause analysis, screenshots, validation results, technical lab reports |
 
-## Current Goals
+Coursework also covers TCP/IP, DNS, DHCP, subnetting, access control, Windows/Linux administration, risk management, and incident response.
 
-1. Complete my AAS in Cybersecurity in December 2026.
-2. Build a practical portfolio of documented security and networking projects.
-3. Earn the Cisco CCNA certification.
-4. Secure an entry-level Help Desk, NOC, Junior SOC, or cybersecurity internship role.
-5. Develop toward Network Security Engineer and Cloud Security Engineer positions.
+## Education and Certifications
 
-## Repository Structure
+- **CompTIA Security+** — earned July 2026
+- **Collin College, AAS in Cybersecurity** — expected December 2026
+- **Cisco CCNA** — planned for early 2027
+- Planning to continue into a Bachelor of Applied Technology program
 
-- `labs/` — Hands-on cybersecurity and networking lab documentation
-- `projects/` — Python, Linux, networking, and security projects
-- `certifications/` — Certification milestones and study reflections
-- `assets/` — Screenshots and supporting portfolio images
+I am transitioning from professional trucking into cybersecurity, bringing experience with regulated operations, accurate documentation, and communication under time pressure.
 
----
+## Next Milestones
 
-*This portfolio is actively being developed as I complete new labs, projects, and certifications.*
+1. Enroll a Windows endpoint in Wazuh and document a controlled alert investigation.
+2. Publish the original Python implementation, schema, fixtures, and offline reproduction steps.
+3. Extend network investigations with documented findings and analyst recommendations.
+
+## Repository Guide
+
+- [labs/](labs/README.md) — Security Onion and Wazuh case studies with screenshot evidence
+- [projects/](projects/README.md) — Python validation case study and recorded test results
+
+All results describe academic or independent lab work. Each case study states its completed scope and remaining work.

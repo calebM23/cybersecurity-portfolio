@@ -4,6 +4,12 @@
 
 This project demonstrates a schema-validated AI output pipeline with a bounded repair loop. It treats model output as an engineering interface: generated JSON is parsed, validated against a strict contract, repaired at most once when invalid, revalidated, and then either accepted or quarantined.
 
+## Evidence and Reproducibility
+
+[The committed results transcript](evidence/capstone-results.txt) records two first-pass successes, five repaired successes, and one rejection across eight fixtures. The final acceptance rate of 87.5% applies only to this test batch; it is not detection accuracy or a production reliability estimate.
+
+This repository currently publishes the case study and results transcript. The executable source, schema, cached fixtures, and generated JSONL artifacts are not included yet, so a reader cannot independently rerun the pipeline from this checkout. Publishing those originals with verified offline run instructions is the next step.
+
 ## Project Goal
 
 Large language models can return useful text while still breaking downstream software through malformed JSON, incorrect data types, missing fields, unsupported enum values, or unexpected keys. This project builds a deterministic boundary between model output and application code.
@@ -71,3 +77,7 @@ The final verification confirmed that all seven accepted records remained schema
 ## Portfolio Relevance
 
 Although created for an AI engineering take-home, the same defensive principles apply directly to cybersecurity and SOC automation: never trust unvalidated input, enforce explicit contracts, isolate failures, limit retries, preserve evidence, and measure pipeline quality.
+
+Schema validity does not establish semantic correctness or security. This project demonstrates validation and failure handling; it was not deployed as a SOC integration.
+
+[Back to projects](../README.md) · [Back to portfolio](../../README.md)
