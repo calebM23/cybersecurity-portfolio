@@ -5,7 +5,7 @@ These labs document setup, investigation, evidence, results, and limitations.
 | Lab | Status | Demonstrated outcome |
 |---|---|---|
 | [Security Onion Zeek ingestion](security-onion-zeek-ingestion/README.md) | Completed September 20, 2026 | Resolved an indexing conflict and restored searchable connection events |
-| [Wazuh SIEM deployment](wazuh-siem-deployment/README.md) | Server deployed September 15, 2026; endpoint work pending | Confirmed dashboard access after all-in-one installation |
+| [Wazuh SIEM endpoint monitoring](wazuh-siem-deployment/README.md) | Updated October 3, 2026 | Enrolled a Windows 11 endpoint, confirmed active agent status, and validated a controlled Event ID 4720 alert |
 
 ## Future Lab Topics
 

@@ -14,13 +14,13 @@ Diagnosed an Elasticsearch mapping conflict that prevented Zeek logs from appear
 
 **Demonstrates:** Linux troubleshooting, Elasticsearch mappings, data streams, network telemetry, and evidence-based validation.
 
-### [Wazuh SIEM Deployment](labs/wazuh-siem-deployment/README.md)
+### [Wazuh SIEM Endpoint Monitoring](labs/wazuh-siem-deployment/README.md)
 
-**Server deployment complete — endpoint monitoring in progress**
+**Windows endpoint enrolled and controlled alert validated — October 3, 2026**
 
-Deployed an all-in-one Wazuh server on Ubuntu in VirtualBox and confirmed dashboard access. The saved dashboard shows no registered endpoint agents; Windows enrollment and controlled alert testing are the next milestones.
+Deployed an all-in-one Wazuh server on Ubuntu in VirtualBox, enrolled a Windows 11 endpoint, confirmed the agent reported **Active**, and generated a controlled Windows account-creation event. Wazuh captured Windows Security **Event ID 4720** and exposed the created account fields for review.
 
-**Demonstrates:** SIEM installation, Linux service setup, virtual networking, and management access validation.
+**Demonstrates:** SIEM deployment, Windows agent enrollment, endpoint telemetry validation, alert triage, event-field review, Linux service setup, and virtual networking.
 
 ### [Structured Outputs Validation Pipeline](projects/structured-outputs-pipeline/README.md)
 
@@ -34,9 +34,10 @@ Built a Python pipeline with strict JSON Schema validation, one permitted repair
 
 | Area | Hands-on work |
 |---|---|
-| Security monitoring | Security Onion, Zeek, Hunt queries, Wazuh deployment |
+| Security monitoring | Security Onion, Zeek, Hunt queries, Wazuh endpoint monitoring |
+| Endpoint telemetry | Windows agent enrollment, Windows Security Event ID 4720, alert-field review |
 | Troubleshooting | Linux logs and services, Elastic Agent/Fleet, Elasticsearch mappings and data streams |
-| Lab infrastructure | VMware Workstation, VirtualBox, Ubuntu Server, NAT and host-only networking |
+| Lab infrastructure | VMware Workstation, VirtualBox, Ubuntu Server, Windows 11, NAT and host-only networking |
 | Programming | Python 3.12, JSON Schema validation, JSONL, repair limits and quarantine |
 | Documentation | Root-cause analysis, screenshots, validation results, technical lab reports |
 
@@ -53,7 +54,7 @@ I am transitioning from professional trucking into cybersecurity, bringing exper
 
 ## Next Milestones
 
-1. Enroll a Windows endpoint in Wazuh and document a controlled alert investigation.
+1. Add a second controlled endpoint scenario and document triage/response logic.
 2. Publish the original Python implementation, schema, fixtures, and offline reproduction steps.
 3. Extend network investigations with documented findings and analyst recommendations.
 
