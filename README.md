@@ -18,9 +18,9 @@ Diagnosed an Elasticsearch mapping conflict that prevented Zeek logs from appear
 
 **Windows endpoint enrolled and controlled alert validated — October 3, 2026**
 
-Deployed an all-in-one Wazuh server on Ubuntu in VirtualBox, enrolled a Windows 11 endpoint, confirmed the agent reported **Active**, and generated a controlled Windows account-creation event. Wazuh captured Windows Security **Event ID 4720** and exposed the created account fields for review.
+Deployed an all-in-one Wazuh SIEM on Ubuntu Server in VirtualBox, enrolled a Windows 11 endpoint, and confirmed **Active** agent status. Validated endpoint log collection by creating the local test account **WazuhTest** and locating the resulting Windows Security **Event ID 4720** in Wazuh. Reviewed the target username, domain, and SID to confirm the event matched the controlled test.
 
-**Demonstrates:** SIEM deployment, Windows agent enrollment, endpoint telemetry validation, alert triage, event-field review, Linux service setup, and virtual networking.
+**Demonstrates:** SIEM deployment, Windows agent enrollment, endpoint telemetry validation, and security-event analysis.
 
 ### [Structured Outputs Validation Pipeline](projects/structured-outputs-pipeline/README.md)
 

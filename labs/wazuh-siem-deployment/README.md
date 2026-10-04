@@ -46,15 +46,29 @@ The dashboard shows one active Windows endpoint and no disconnected or never-con
 
 The controlled test produced a Windows Security **Event ID 4720** alert in Wazuh. The captured event details identified the created test account as **WazuhTest** and showed the associated Windows event fields, including the target user and SID.
 
-Key fields recorded from the evidence:
+![Wazuh search filtered to Windows Security Event ID 4720, showing one matching alert](evidence/windows-event-4720.png)
+
+The query `data.win.system.eventID:4720` returned one alert from **MrL**, with rule **60109**, description **User account enabled or created**, and rule level **8**.
+
+![Expanded Wazuh event details showing the initiating user and created test account](evidence/windows-event-4720-account-fields.png)
+
+The account fields show initiating user **caleb** and target account **WazuhTest**. This was an intentional local account-creation test.
+
+Key fields recorded from the screenshots:
 
 | Field | Recorded value |
 |---|---|
-| Event ID | 4720 |
+| Event ID | 4720 (search filter) |
+| Alert timestamp | October 3, 2026, 15:27:52.800 (dashboard display; timezone not shown) |
+| Agent name / ID | MrL / 001 |
+| Wazuh rule ID | 60109 |
+| Rule description | User account enabled or created |
+| Rule level | 8 |
+| Initiating user / domain | caleb / BAZZIE |
 | Target user | WazuhTest |
 | Target domain | bazzie |
-| Target SID | S-1-5-21-2125906473-1988681069-2276677443-1803 |
-| Endpoint status | Active |
+| Target SID | S-1-5-21-2125906473-1988681069-2276677443-1003 |
+| Endpoint status | Active (separate dashboard capture) |
 
 ## Analyst Interpretation
 
@@ -72,6 +86,15 @@ In this lab, the event was generated intentionally to validate collection and tr
 - Alert triage and field interpretation
 - Linux service setup and virtual networking
 - Evidence-based technical documentation
+
+## Project Bullets
+
+- Deployed Wazuh on Ubuntu Server in VirtualBox and enrolled a Windows 11 endpoint, confirming Active agent status and endpoint connectivity.
+- Validated Windows Security log ingestion using a controlled account-creation test; located Event ID 4720 in Wazuh and reviewed the target username, domain, and SID.
+
+## Evidence Limits
+
+The screenshots document one controlled test. The dashboard timestamp does not show a timezone. Rule level 8 is the Wazuh alert level, not a conclusion that this intentional test was malicious.
 
 ## Next Step
 
